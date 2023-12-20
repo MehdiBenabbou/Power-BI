@@ -1,4 +1,4 @@
--- Nettoyage des données 
+-- Nettoyage des donnÃ©es 
 -- (Supprimer Les lignes vides)
 
 DELETE FROM stolen_vehicles
@@ -10,10 +10,10 @@ OR vehicle_desc IS NULL;
 ALTER TABLE stolen_vehicles
 DROP COLUMN vehicle_desc, color;
 
-" -- Ajouter une nouvelle colonne pour stocker le nom du jour"
+-- Ajouter une nouvelle colonne pour stocker le nom du jour
 ALTER TABLE stolen_vehicles
 ADD DayOfWeek NVARCHAR(50); 
--- Change the datatype and size as needed
+
 
 -- Update the new column with the day names
 UPDATE stolen_vehicles
